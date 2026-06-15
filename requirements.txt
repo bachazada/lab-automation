@@ -1,0 +1,10 @@
+opentrons==9.0.0
+pandas
+pyyaml
+schedule
+watchdog
+pyserial
+matplotlib
+seaborn
+streamlit
+pytest

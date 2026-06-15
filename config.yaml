@@ -1,0 +1,70 @@
+# config.yaml — Lab Automation Suite
+#
+# Single source of truth for the entire pipeline. Change `protocol.type`
+# to switch which assay protocol_generator builds — no code changes needed.
+#
+# This is the same philosophy as your drug-target pipeline's config.yaml,
+# extended to support multiple "rule sets" (here: protocol types).
+
+protocol:
+  name: "myotwin Prep — Cardiac Assay Pipeline"
+  api_level: "2.15"
+  # type: one of "serial_dilution", "reagent_dispense", "media_exchange"
+  type: "serial_dilution"
+
+labware:
+  tip_rack: "opentrons_96_tiprack_300ul"
+  reservoir: "nest_12_reservoir_15ml"
+  plate: "corning_96_wellplate_360ul_flat"
+  pipette: "p300_single_gen2"
+
+deck:
+  tip_rack_slot: 1
+  reservoir_slot: 2
+  plate_slot: 3
+
+volumes:
+  transfer_volume_ul: 100
+  diluent_volume_ul: 100
+  max_well_volume_ul: 360
+  tip_capacity_ul: 300
+
+dilution:
+  num_columns: 12
+  rows_per_column: 8
+  dilution_factor: 2
+
+reagent_dispense:
+  target_volume_ul: 50
+  target_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]   # which columns receive reagent
+
+media_exchange:
+  remove_volume_ul: 150     # old media removed per well
+  add_volume_ul: 150        # fresh media added per well
+  target_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+# Biological parameters (Week 1)
+biological:
+  flow_rate_factor: 0.5
+  bottom_clearance_mm: 1.5
+  air_gap_ul: 10
+  mix_repetitions: 3
+  mix_volume_ul: 75
+  touch_tip_speed: 20
+
+validation:
+  max_cv_threshold: 15.0
+  require_positive_volumes: true
+
+# Instrument simulation parameters (Week 2)
+instrument:
+  noise_cv: 0.03
+  outlier_prob: 0.05
+
+# Pipeline orchestration
+pipeline:
+  num_runs: 5
+  seconds_between_runs: 1.5
+  incoming_dir: "data/raw"
+  processed_dir: "data/processed"
+  master_results_csv: "data/processed/master_results.csv"

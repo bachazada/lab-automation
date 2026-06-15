@@ -1,0 +1,6 @@
+plate_id,ingested_at,source_file,n_pass,n_fail,mean_cv_pct,total_outliers,overall_status
+RUN_001,2026-06-15T19:26:09,plate_RUN_001.csv,5,7,24.8,0,FAIL
+RUN_002,2026-06-15T19:26:09,plate_RUN_002.csv,6,6,16.8,0,FAIL
+RUN_003,2026-06-15T19:26:10,plate_RUN_003.csv,4,8,27.4,0,FAIL
+RUN_004,2026-06-15T19:26:12,plate_RUN_004.csv,4,8,23.1,0,FAIL
+RUN_005,2026-06-15T19:26:13,plate_RUN_005.csv,4,8,28.1,0,FAIL
