@@ -1,8 +1,7 @@
 # Lab Automation Suite
 
 A small, config-driven lab automation pipeline built with the Opentrons
-Protocol API, Python, and Streamlit — built as preparation for a Lab
-Automation internship at [myotwin GmbH](https://myotwin.com), Göttingen.
+Protocol API, Python, and Streamlit 
 
 It demonstrates the three layers a real automation stack needs:
 
