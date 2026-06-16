@@ -15,8 +15,6 @@ the most recent raw plate files in data/raw/ to show:
 HOW TO RUN:
     streamlit run dashboard/app.py
 
-This is the "front end" of the suite — what a wet-lab scientist at
-myotwin would actually look at after a robot run completes.
 """
 
 import os
