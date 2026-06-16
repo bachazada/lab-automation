@@ -7,7 +7,7 @@
 # extended to support multiple "rule sets" (here: protocol types).
 
 protocol:
-  name: "myotwin Prep — Cardiac Assay Pipeline"
+  name: "Cardiac Assay Pipeline"
   api_level: "2.15"
   # type: one of "serial_dilution", "reagent_dispense", "media_exchange"
   type: "serial_dilution"
