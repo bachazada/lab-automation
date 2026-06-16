@@ -8,13 +8,6 @@ ONE of three assay protocols depending on `protocol.type`:
   - reagent_dispense  : dispense a fixed volume of reagent to selected columns
   - media_exchange    : remove old media + add fresh media (cell culture maintenance)
 
-WHY THREE TYPES:
-Real automation work isn't "write one protocol forever" — it's "build a
-generic engine that handles the lab's common operations." myotwin's
-cardiac tissue cultures need regular media exchange; dose-response assays
-need serial dilution; reagent dispensing is needed for almost everything.
-One engine, three behaviors, all driven by config.
-
 HOW TO RUN (simulation):
     opentrons_simulate protocols/protocol_generator.py
 
